@@ -4,4 +4,8 @@ public abstract class Shape {
     private int area;
 
     public int getArea() { return area; }
+
+    public String speak() {
+        return "I'm shape";
+    }
 }
