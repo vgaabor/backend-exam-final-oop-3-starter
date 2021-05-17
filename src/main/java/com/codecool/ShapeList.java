@@ -10,19 +10,24 @@ public class ShapeList {
     }
 
     public void add(Shape newShape) {
-        Shapes.add(newShape);
+        this.Shapes.add(newShape);
     }
 
     public Shape getLargest() {
-        int maxArea = 0;
-        Shape maxShape = new Shape();
-        for (int i = 0; i < this.Shapes.size(); i++) {
-            if (maxArea < this.Shapes.get(i).getArea()) {
-                maxArea = this.Shapes.get(i).getArea();
-                maxShape = this.Shapes.get(i);
+        if (this.Shapes.isEmpty()) {
+            return null;
+        } else {
+            int maxArea = 0;
+            Shape maxShape = null;
+
+            for (int i = 0; i < this.Shapes.size(); i++) {
+                if (maxArea < this.Shapes.get(i).getArea()) {
+                    maxArea = this.Shapes.get(i).getArea();
+                    maxShape = this.Shapes.get(i);
+                }
             }
+            return maxShape;
         }
-        return maxShape;
     }
 
     public String compareArea(Shape shapeA, Shape shapeB) {
