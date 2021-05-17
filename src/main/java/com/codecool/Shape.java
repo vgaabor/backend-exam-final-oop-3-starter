@@ -1,7 +1,9 @@
 package com.codecool;
 
-public abstract class Shape {
+public class Shape {
     private int area;
+
+    public void Shape() {}
 
     public int getArea() { return area; }
 
