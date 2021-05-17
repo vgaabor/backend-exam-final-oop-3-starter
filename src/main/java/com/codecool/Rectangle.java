@@ -5,7 +5,7 @@ public class Rectangle extends Shape {
     private int sideB;
 
     public Rectangle(int newA, int newB) {
-        this.sideB = newA;
+        this.sideA = newA;
         this.sideB = newB;
     }
 
